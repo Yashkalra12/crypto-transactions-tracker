@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const transactionsRoutes = require('./src/routes/transactionsRoutes');
+const fetchAndSaveEthPrice = require('./src/controller/ethPriceController');
 require('dotenv').config();
 
 const app = express();
@@ -14,6 +15,8 @@ mongoose.connect(process.env.MONGODB_URI)
 
 app.use(express.json());
 app.use('/api', transactionsRoutes);
+
+setInterval(fetchAndSaveEthPrice, 600000);
 
 
 app.get('/', (req, res) => {
