@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { fetchTransactions } = require('../controllers/transactionsController');
+const { fetchTransactions } = require('../controller/transactionsController')
 
 router.get('/transactions/:address', fetchTransactions);
 

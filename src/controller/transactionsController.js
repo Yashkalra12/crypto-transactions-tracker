@@ -1,4 +1,4 @@
-const Transaction = require('../models/transactionModel');
+const Transaction = require('../model/transactionModel');
 const { getTransactions } = require('../services/etherscanService');
 
 const fetchTransactions = async (req, res) => {
