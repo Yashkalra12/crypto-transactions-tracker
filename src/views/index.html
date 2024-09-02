@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Transaction Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        h1 { color: #4CAF50; }
+        p { margin: 10px 0; }
+        code { background: #f4f4f4; padding: 5px; display: block; margin: 10px 0; }
+        a { color: #007BFF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Crypto Transaction Tracker</h1>
+    <p>This server provides APIs to track Ethereum transactions and prices.</p>
+
+    <h2>Available Endpoints:</h2>
+    <ul>
+        <li>
+            <strong>Fetch Transactions:</strong> 
+            <code>GET /api/transactions/:address</code>
+            <p>Fetches and stores transactions for the given Ethereum address.</p>
+        </li>
+        <li>
+            <strong>Get Total Expenses and Current Ethereum Price:</strong> 
+            <code>GET /api/expenses/:address</code>
+            <p>Calculates total expenses of all transactions for the given Ethereum address and fetches the current Ethereum price.</p>
+        </li>
+    </ul>
+
+    <h2>Example Usage:</h2>
+    <p>Fetch transactions:</p>
+    <code>GET /api/transactions/0xce94e5621a5f7068253c42558c147480f38b5e0d</code>
+
+    <p>Get expenses and Ethereum price:</p>
+    <code>GET /api/expenses/0xce94e5621a5f7068253c42558c147480f38b5e0d</code>
+
+    <p>For more details, refer to the README in the <a href="https://github.com/Yashkalra12/crypto-transactions-tracker" target="_blank">GitHub repository</a>.</p>
+</body>
+</html>

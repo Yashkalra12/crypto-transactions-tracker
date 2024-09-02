@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 const transactionsRoutes = require('./src/routes/transactionsRoutes');
 const fetchAndSaveEthPrice = require('./src/controller/ethPriceController');
 require('dotenv').config();
@@ -16,13 +17,12 @@ mongoose.connect(process.env.MONGODB_URI)
 app.use(express.json());
 app.use('/api', transactionsRoutes);
 
+
 setInterval(fetchAndSaveEthPrice, 600000);
 
 
 app.get('/', (req, res) => {
-    res.send(`
-      <h1>Crypto Transaction Tracker API</h1>
-    `);
+    res.sendFile(path.join(__dirname,'./src/views', 'index.html'));
   });
 
 app.listen(PORT, () => {

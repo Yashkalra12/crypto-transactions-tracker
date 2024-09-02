@@ -6,7 +6,13 @@ const fetchTransactions = async (req, res) => {
     const { address } = req.params;
     const transactions = await getTransactions(address);
 
+    if (!transactions || transactions.length === 0) {
+      return res.status(404).json({ error: 'No transactions found from Etherscan' });
+    }
+
+    
     const existingTransaction = await Transaction.findOne({ address });
+
     if (existingTransaction) {
       existingTransaction.transactions = transactions;
       await existingTransaction.save();
