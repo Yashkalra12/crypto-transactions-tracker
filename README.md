@@ -79,7 +79,7 @@ Replace `your_mongodb_connection_string` with your actual MongoDB connection str
 
 ## Deployment
 
-This application can be deployed on cloud platforms like Heroku, Vercel, or any other suitable service. Make sure to configure the environment variables on the hosting platform.
+The Crypto Transaction Tracker application is deployed on Vercel, making it accessible and scalable. You can interact with the live version of the app at [Crypto Transaction Tracker](https://crypto-transaction-tracker-ecto0gl5u-yashkalra12s-projects.vercel.app/). The deployment leverages Vercel’s seamless integration with Node.js to provide a reliable and responsive server environment for fetching and displaying Ethereum transaction data and prices in real time.
 
 ## Example Usage
 
