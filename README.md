@@ -4,9 +4,12 @@ A server-side application built with Node.js and MongoDB to fetch and track cryp
 
 ## Features
 
-- **Fetch Transactions**: Retrieves and stores normal transactions of an Ethereum address using the Etherscan API.
-- **Track Ethereum Prices**: Fetches and stores the latest Ethereum prices every 10 minutes using the CoinGecko API.
-- **Calculate Expenses**: Calculates total expenses based on gas used and gas price for each transaction and fetches the current Ethereum price.
+- **Fetch Transactions**: 
+Retrieves and stores normal transactions of an Ethereum address using the Etherscan API.
+- **Track Ethereum Prices**: 
+Fetches and stores the latest Ethereum prices every 10 minutes using the CoinGecko API.
+- **Calculate Expenses**:
+ Calculates total expenses based on gas used and gas price for each transaction and fetches the current Ethereum price.
 
 ## Technologies Used
 
@@ -83,13 +86,13 @@ This application can be deployed on cloud platforms like Heroku, Vercel, or any 
 1. **Fetch Transactions**:
 
    ```bash
-   curl http://localhost:3000/api/transactions/0xce94e5621a5f7068253c42558c147480f38b5e0d
+   http://localhost:3000/api/transactions/0xce94e5621a5f7068253c42558c147480f38b5e0d
    ```
 
 2. **Get Total Expenses and Ethereum Price**:
 
    ```bash
-   curl http://localhost:3000/api/expenses/0xce94e5621a5f7068253c42558c147480f38b5e0d
+   http://localhost:3000/api/expenses/0xce94e5621a5f7068253c42558c147480f38b5e0d
    ```
 
 ## Future Enhancements
